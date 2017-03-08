@@ -1,7 +1,7 @@
 var path = require('path');
 module.exports = {
   // 这是一个主文件包括其他模块
-  entry: './src/main.js',
+  entry: './src/element.js',
   // 编译的文件路径
   output: {
       //`dist`文件夹
@@ -26,7 +26,21 @@ module.exports = {
         exclude: /node_modules/,  
         loader: 'vue-loader'  
       },
-      { test: /\.css$/, loader: 'style!css!autoprefixer',exclude: /node_modules/}
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+        loader: 'file-loader'
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,
+        loader: 'file-loader',
+        query: {
+          name: '[name].[ext]?[hash]'
+        }
+      }
     ]
     
   },
