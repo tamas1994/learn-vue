@@ -1,7 +1,7 @@
 var path = require('path');
 module.exports = {
   // 这是一个主文件包括其他模块
-  entry: './src/element.js',
+  entry: './src/eleme.js',
   // 编译的文件路径
   output: {
       //`dist`文件夹
