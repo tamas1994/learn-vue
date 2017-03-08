@@ -7,7 +7,7 @@ module.exports = {
       //`dist`文件夹
     path: path.join(__dirname, './dist'),
     // 文件 `build.js` 即 dist/build.js
-    filename: '[name].js',
+    filename: 'build.js',
     //[name]这里是webpack提供的根据路口文件自动生成的名字
   },
   module: {
